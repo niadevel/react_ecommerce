@@ -1,0 +1,18 @@
+.container-count {
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.number-count {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+}
+
+.button-addToCart:hover {
+  background-color: #3fce3f; 
+  color:#1a1919 
+}

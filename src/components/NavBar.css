@@ -1,0 +1,67 @@
+/* src/components/NavBar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+.navbar-brand {
+  color: #df9c38;
+  font-size: 2.3rem;
+  text-decoration: none;
+  font-family: cursive;
+}
+
+.navbar-brand a:hover {
+  color:#db4c36;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+.navbar-nav li {
+  margin-right: 15px;
+}
+
+.navbar-nav a {
+  color: #110505;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+  color: #df9c38;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  color: white;
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  background-color: #f3845b;
+  color: #201a1a;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+a.active {
+  color: #ff9500;
+}
