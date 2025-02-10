@@ -19,11 +19,9 @@ export default function NavBar() {
             <NavLink to="/category/necklace">Necklaces</NavLink>
           </li>
           <li>
-            <NavLink to="/cart">Carrito</NavLink>
+            <NavLink to="/cart"><CartWidget /></NavLink>
           </li>
         </ul>
-
-      <CartWidget />
     </nav>
   );
 }

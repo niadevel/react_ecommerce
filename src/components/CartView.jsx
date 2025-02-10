@@ -1,15 +1,33 @@
 import { useContext } from 'react';
 import cartContext from '../context/cartContext';
 import { createBuyOrder } from '../data/database';
+import { useState } from 'react';
 
 function CartView() {
+    const [userData, setUserData] = useState({
+      username: "",
+      surname: "",
+      age: ""
+    })
+
+    function onInputChange(evt){
+      const inputName = evt.target.name;
+      const newUserData = {...userData}
+      newUserData[inputName] = evt.target.value
+      setUserData(newUserData)
+    }
+
+
     const { cartItems, removeItem, getTotalPrice } = useContext(cartContext);
     
-    async function handleCheckout(){
+    async function handleCheckout(evt){
+      evt.preventDefault();
+
       const orderData = {
         buyer: {
-          name: "Bruno",
-          email: "brunito@gmail.com",
+          username: userData.username,
+          surname: userData.surname,
+          age: userData.age
         },
         items: cartItems,
         total: getTotalPrice(),
@@ -34,7 +52,39 @@ function CartView() {
           <hr />
         </div>
       ))}
-      <button onClick={handleCheckout}>Comprar</button>
+
+      <form>
+      {/* <h2>Completa tus datos para completar la compra🛍</h2> */}
+
+      <div style={{ display: "flex", marginBottom: 8 }}>
+        <label style={{ width: "100px", marginRight: 4 }}>Nombre</label>
+        <input name="username" type="text" onChange={onInputChange} />
+      </div>
+
+      <div style={{ display: "flex", marginBottom: 8 }}>
+        <label style={{ width: "100px", marginRight: 4 }}>Apellido</label>
+        <input name="surname" type="text" onChange={onInputChange} />
+      </div>
+
+      <div style={{ display: "flex", marginBottom: 8 }}>
+        <label style={{ width: "100px", marginRight: 4 }}>Edad</label>
+        <input name="age" type="text" onChange={onInputChange} />
+      </div>
+
+      <button
+        disabled={
+          !(
+            userData.username !== "" &&
+            userData.surname !== "" &&
+            userData.age !== ""
+          )
+        }
+        onClick={handleCheckout}
+      >
+        Realiza tu compra🛍
+      </button>
+    </form>
+
     </div>
   )
 }
