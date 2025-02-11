@@ -30,7 +30,7 @@ function ItemCount(props) {
         <button className="button-count" onClick={handleAdd}>+</button>
       </div>
       <div>
-        <button className="button-addToCart" onClick={handleClick}>Add to Cart</button>
+        <button className="button-addToCart" onClick={handleClick}>Add To Cart</button>
       </div>
     </div>
   );

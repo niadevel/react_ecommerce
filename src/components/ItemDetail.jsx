@@ -2,12 +2,15 @@ import ItemCount from "./ItemCount";
 import "./itemDetail.css";
 import { useContext, useState } from "react";
 import cartContext from "../context/cartContext";
+import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 function ItemDetail(props) {
   const [isAddedToCart, setIsAddedToCart] = useState(false);
 
   const { price, title, description, imgUrl, id, stock } = props;
   const {addItem} = useContext(cartContext);
+
 
   function onSubmitCount(count) {
     console.log(`Agregaste ${count} unidades al carrito`);
@@ -28,7 +31,7 @@ function ItemDetail(props) {
       <div className="card-count-detail">
         {
           isAddedToCart 
-           ? <button>Ver carrito</button>
+           ? <Link to="/cart"> <button >View My Cart</button> </Link>
            : <ItemCount onSubmitCount={onSubmitCount} max={stock} />
       }
       </div>
