@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
-
+import Swal from "sweetalert2";
+import "sweetalert2";
+import "sweetalert2-react-content"
 
 const cartContext = createContext({cartItems: [] });
 
@@ -59,9 +61,15 @@ function addItem (itemInfo) {
   }
 
   function clearAllItems() {
-
+    setCartItems([])
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Tu carrito está vacío",
+      showConfirmButton: false,
+      timer: 2000
+    });
   }
-  
   
   return (
     <cartContext.Provider

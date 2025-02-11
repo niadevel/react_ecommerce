@@ -18,7 +18,7 @@ function CartView() {
     }
 
 
-    const { cartItems, removeItem, getTotalPrice } = useContext(cartContext);
+    const { cartItems, removeItem, getTotalPrice, clearAllItems } = useContext(cartContext);
     
     async function handleCheckout(evt){
       evt.preventDefault();
@@ -52,6 +52,8 @@ function CartView() {
           <hr />
         </div>
       ))}
+
+      <button onClick={clearAllItems}>Vaciar mi carrito 🛒</button>
 
       <form>
       {/* <h2>Completa tus datos para completar la compra🛍</h2> */}

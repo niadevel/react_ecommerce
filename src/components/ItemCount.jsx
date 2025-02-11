@@ -12,9 +12,10 @@ function ItemCount(props) {
   };
 
   const handleSubstract = () => {
-    // TODO: Antes de modificar el estado -> VALIDAR que no descienda de un min (1)
+    if (count > 1){
     console.log("Resta");
     setCount(count - 1);
+    }
   };
 
   function handleClick() {
