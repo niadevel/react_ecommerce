@@ -12,7 +12,7 @@ _E-commerce de productos de joyería utilizando React Js, Vite, hooks, context, 
 
 ---
 
-![E-commerce con React]()
+![E-commerce con React](img)
 
 📌 [Sitio Web E-commerce React (https://react-ecommerce-navy-mu.vercel.app/)]
 
