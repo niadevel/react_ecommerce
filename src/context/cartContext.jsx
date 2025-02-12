@@ -33,20 +33,6 @@ function addItem (itemInfo) {
   setCartItems(newCartState);
 }
 
-
-  // function addItem({price, id, title, imgUrl, count}){
-  //   const copyCartItems = [...cartItems];
-  //   copyCartItems.push({
-  //     id: id,
-  //     title: title,
-  //     imgUrl: imgUrl,
-  //     count: count,
-  //     price: price,
-  //   });
-  //   setCartItems(copyCartItems);
-
-  // }
-
   function countItemsInCart() {
     let total = 0;
     cartItems.forEach((item) => {
