@@ -4,19 +4,19 @@ import { createBuyOrder } from '../data/database';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const { cartItems, removeItem, getTotalPrice, clearAllItems } = useContext(cartContext);
+// const { cartItems, removeItem, getTotalPrice, clearAllItems } = useContext(cartContext);
 
 function CartView() {
-  if (cartItems.length === 0) {
+  // if (cartItems.length === 0) {
     
-    return (
-    <div className="cartEmptyView">
-      <h1>Tu carrito está vacío 🛒</h1>
-      <Link to ="/"><button>Quiero comprar 🛍️</button></Link>
-    </div>
-    )
-  }
-  else {
+  //   return (
+  //   <div className="cartEmptyView">
+  //     <h1>Tu carrito está vacío 🛒</h1>
+  //     <Link to ="/"><button>Quiero comprar 🛍️</button></Link>
+  //   </div>
+  //   )
+  // }
+  // else {
    
     const [userData, setUserData] = useState({
       username: "",
@@ -32,7 +32,7 @@ function CartView() {
     }
 
 
-    // const { cartItems, removeItem, getTotalPrice, clearAllItems } = useContext(cartContext);
+    const { cartItems, removeItem, getTotalPrice, clearAllItems } = useContext(cartContext);
     
     async function handleCheckout(evt){
       evt.preventDefault();
@@ -103,7 +103,7 @@ function CartView() {
 
     </div>
   )
- }
+//  }
 }
 
 export default CartView
