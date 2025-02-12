@@ -1,11 +1,17 @@
 import { useState } from "react";
 import "./itemCount.css";
+import Swal from "sweetalert2";
+import "sweetalert2";
+import "sweetalert2-react-content"
 
 function ItemCount(props) {
   let [count, setCount] = useState(1);
 
   const handleAdd = () => {
-    if (count === props.max) return;
+    if (count === props.max) {
+      Swal.fire("¡No hay más stock!");
+      return 
+    };
     console.log("Suma");
     setCount(count + 1);
     // count = count +1
