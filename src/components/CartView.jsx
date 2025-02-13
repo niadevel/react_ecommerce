@@ -68,6 +68,8 @@ function CartView() {
         </div>
       ))}
 
+      <h2>Total: ${getTotalPrice()}</h2>
+      
       <button onClick={clearAllItems}>Vaciar mi carrito 🛒</button>
 
       <form>
