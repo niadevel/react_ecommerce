@@ -83,8 +83,3 @@ export async function createBuyOrder(orderData) {
     return newOrderDoc.id
 }
 
-
-
-export async function updateStock() {
-    
-}
