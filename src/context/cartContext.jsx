@@ -17,7 +17,6 @@ export function CartContextProvider(props) {
       return totalPrice;
     }
 
-  //copiando objeto dentro del array
 function addItem (itemInfo) {
   // const { id, title, imgUrl, count, price } =itemInfo;
   const isInCart = cartItems.some( item => item.id === itemInfo.id)

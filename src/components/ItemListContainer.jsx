@@ -7,7 +7,6 @@ function ItemListContainer(props) {
   const [products, setProducts] = useState([]);
   console.log("%cRender de ItemListContainer", "color: yellow");
   const { catid } = useParams();
-  // Si tenemos un param "catid" entonces solicitamos solo los productos de esa categoria
 
   useEffect(() => {
     if (catid === undefined) {

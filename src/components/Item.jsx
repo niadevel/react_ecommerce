@@ -10,7 +10,6 @@ function Item(props) {
       <img src={img} alt="product img" />
       <div className="card-body">
         <h3 className="card-title">{title}</h3>
-        {/* <p className="card-text">{text}</p> */}
         <div>
           <p className="card-price">$ {price}</p>
         </div>

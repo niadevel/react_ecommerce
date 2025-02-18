@@ -67,8 +67,6 @@ function CartView() {
       }
 
       const newOrderID = await createBuyOrder(orderData);
-      console.log("Compra realizada", newOrderID);
-      console.log("order data", orderData);
 
       let htmlTicketArray = cartItems.map((cartItems) => (
       `
@@ -98,7 +96,6 @@ function CartView() {
 
       let htmlTicket = htmlTicketArray.join(`<br>`)+htmlTotal+htmlDate
 
-      console.log("htmlTicket", htmlTicket);
     
       Swal.fire({
         position: "center",

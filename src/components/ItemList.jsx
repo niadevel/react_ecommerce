@@ -12,7 +12,6 @@ function ItemList(props) {
             id={item.id}
             title={item.title}
             price={item.price}
-            // text={item.category}
             img={item.imgUrl}
           />
         ))}
