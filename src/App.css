@@ -8,7 +8,6 @@ section {
   border-bottom: solid 2px rgb(149, 149, 149);
 }
 
-/* Source Code: https://github.com/rilwis/bamboo */
 :root {
   --b-font-main: system-ui, sans-serif;
   --b-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -21,11 +20,11 @@ section {
   --b-btn-txt: #fff;
   --b-focus: #88c0d0;
 }
-*,
+/* *,
 ::before,
 ::after {
   box-sizing: border-box;
-}
+} */
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -44,14 +43,13 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-text-size-adjust: 100%;
 }
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6,
 p,
-ul,
 ol,
 dl,
 dd,
@@ -64,11 +62,11 @@ address,
 hr,
 fieldset,
 iframe,
-audio,
+audio, */
 video {
   margin: 0 0 1.5rem;
 }
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -77,12 +75,15 @@ h6 {
   line-height: 1.25;
   margin-top: 2rem;
   text-wrap: balance;
-}
+} */
 h1 {
   font-size: 2rem;
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  color: #413f3f
 }
 h3 {
   font-size: 1.25rem;
@@ -104,6 +105,13 @@ a:hover {
   text-decoration: none;
 }
 
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 2rem 2rem;
+}
 
 video,
 svg {

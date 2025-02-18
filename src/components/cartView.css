@@ -1,0 +1,63 @@
+.cartEmptyView {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 70vh;
+    align-items: center;
+    gap: 25px
+}
+
+h1 {
+    text-align: center;
+}
+
+.boxCart {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    height: auto;
+}
+
+.boxCart button {
+    width: fit-content;
+    justify-items: center;
+}
+
+.totalCart {
+    color: #a11313;
+}
+
+.clearCart button{
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+}
+
+h2 {
+    padding-top: 5rem;
+}
+
+.formCart {
+    width: 50vw;
+    justify-items: center;
+   margin: auto; 
+   display: flex;
+   margin-bottom: 8;
+   margin-right: 4;
+   flex-direction: column;
+}
+
+.formCart label {
+    font-weight: bold;
+}
+
+.formCart input {
+width: 40vw;
+margin-bottom: 10px;
+}
+
+

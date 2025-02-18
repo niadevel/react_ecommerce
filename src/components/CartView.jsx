@@ -5,7 +5,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Swal from "sweetalert2";
 import "sweetalert2";
-import "sweetalert2-react-content"
+import "sweetalert2-react-content";
+import "./cartView.css"
 
 function realizarCompra() {
   setCartItems([])
@@ -20,11 +21,9 @@ function realizarCompra() {
   });
 }
 
-
 function CartView() {
   const { cartItems, removeItem, getTotalPrice, clearAllItems } = useContext(cartContext);
   
-
   if (cartItems.length === 0) {
     
     return (
@@ -110,17 +109,14 @@ function CartView() {
         showConfirmButton: true,
         timer: 8000
       });
-    
-
     }
     
-
   return (
     <div>
         <h1>Tu carrito</h1> 
       {cartItems.map((item) => (
         <div key={item.id}>
-          <div>
+          <div className="boxCart">
             <h3>{item.title}</h3>
             <p>Precio: ${item.price}</p>
             <p>Unidades: {item.count}</p>
@@ -130,36 +126,36 @@ function CartView() {
         </div>
       ))}
 
-      <h2>Total: ${getTotalPrice()}</h2>
+      <h2 className="totalCart">Total: ${getTotalPrice()}</h2>
 
-      <button onClick={clearAllItems}>Vaciar mi carrito 🛒</button>
+      <button className="clearCart" onClick={clearAllItems}>Vaciar mi carrito 🛒</button>
 
-      <form>
+      <form className="formCart">
       <h2>Completa tus datos para terminar la compra 🛍</h2>
 
-      <div style={{ display: "flex", marginBottom: 8 }}>
-        <label style={{ width: "100px", marginRight: 4 }}>Nombre</label>
-        <input name="username" type="text" onChange={onInputChange} />
+      <div>
+        <label>Nombre</label>
+        <input name="username" type="text" required onChange={onInputChange} />
       </div>
 
-      <div style={{ display: "flex", marginBottom: 8 }}>
-        <label style={{ width: "100px", marginRight: 4 }}>Apellido</label>
-        <input name="surname" type="text" onChange={onInputChange} />
+      <div>
+        <label >Apellido</label>
+        <input name="surname" type="text" required onChange={onInputChange} />
       </div>
 
-      <div style={{ display: "flex", marginBottom: 8 }}>
-        <label style={{ width: "100px", marginRight: 4 }}>Teléfono</label>
-        <input name="phone" type="text" onChange={onInputChange} />
+      <div>
+        <label>Teléfono</label>
+        <input name="phone" type="number" required onChange={onInputChange} />
       </div>
 
-      <div style={{ display: "flex", marginBottom: 8 }}>
-        <label style={{ width: "100px", marginRight: 4 }}>Email</label>
-        <input name="email" type="text" onChange={onInputChange} />
+      <div>
+        <label>Email</label>
+        <input name="email" type="email" required onChange={onInputChange} />
       </div>
 
-      <div style={{ display: "flex", marginBottom: 8 }}>
-        <label style={{ width: "100px", marginRight: 4 }}>Dirección</label>
-        <input name="adress" type="text" onChange={onInputChange} />
+      <div>
+        <label>Dirección</label>
+        <input name="adress" type="text" required onChange={onInputChange} />
       </div>
 
       <button
@@ -172,8 +168,8 @@ function CartView() {
             userData.adress !== ""
           )
         }
-        onClick={handleCheckout}
-      >
+        onClick={handleCheckout}>
+        
         Realiza tu compra🛍
       </button>
     </form>
